@@ -41,7 +41,8 @@ body {
 .logo-icon {
     font-weight: bold;
     font-size: 1.8rem;
-    color: var(--red);
+    color: var(--red); /* Красный цвет для "ОТО" */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 .equalizer span {
