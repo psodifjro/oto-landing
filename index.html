@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОТО МИИГАиК | Техническое обеспечение мероприятий</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">ОТО</div>
+            <div class="equalizer">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <nav id="navbar">
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#team">Команда</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+        <div class="mobile-menu-btn">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="parallax">
+        <div class="hero-content">
+            <h1 data-aos="fade-down">ОТО МИИГАиК</h1>
+            <p data-aos="fade-down" data-aos-delay="200">Профессиональное световое, звуковое и медиа сопровождение мероприятий</p>
+            <a href="#contacts" class="cta-button" data-aos="zoom-in">Оставить заявку</a>
+        </div>
+        <div class="stage-animation">
+            <div class="spotlight"></div>
+            <div class="speaker"></div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="section">
+        <h2>О нас</h2>
+        <div class="achievements">
+            <div class="achievement-card" data-aos="fade-up">
+                <h3>50+</h3>
+                <p>мероприятий за 2024/2025 год</p>
+            </div>
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Международный форум</h3>
+                <p>Организация выставки "Пространственные данные"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="section">
+        <h2>Услуги</h2>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Световое оформление</h3>
+                <p>Профессиональное освещение сцены и пространства</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-volume-up"></i>
+                <h3>Звуковое оборудование</h3>
+                <p>Кристально чистый звук для любых мероприятий</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-video"></i>
+                <h3>Медиаподдержка</h3>
+                <p>Видеотрансляции и мультимедийные решения</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Команда -->
+    <section id="team" class="section">
+        <h2>Наша команда</h2>
+        <div class="team-grid">
+            <div class="team-card" data-aos="fade-up">
+                <div class="photo-placeholder"></div>
+                <h3>Иван Петров</h3>
+                <p>Звукорежиссер</p>
+            </div>
+            <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="photo-placeholder"></div>
+                <h3>Анна Смирнова</h3>
+                <p>Светодизайнер</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="section">
+        <h2>Отзывы</h2>
+        <div class="slider">
+            <div class="slide active">
+                <p>"Отлично организовали звук на конференции!"</p>
+                <span>— Клиент, 2025</span>
+            </div>
+            <div class="slide">
+                <p>"Лучшее световое решение для нашего фестиваля"</p>
+                <span>— Организатор, 2024</span>
+            </div>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="section">
+        <h2>Контакты</h2>
+        <div class="contact-grid">
+            <form class="contact-form" id="feedback-form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Сообщение"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Москва, Гороховский пер., 4</p>
+                <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                <p><i class="fas fa-envelope"></i> oto@miigaik.ru</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>
