@@ -439,6 +439,33 @@ html {
     width: 20px;
     text-align: center;
 }
+/* Контейнер для карты и формы */
+.contacts-container {
+    display: flex;
+    height: 100vh;
+}
+
+.contact-form {
+    width: 40%;
+    padding: 40px;
+    background: white;
+    z-index: 2;
+}
+
+.map-container {
+    width: 60%;
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+#map:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 /* Стили для секций с фоновыми изображениями (добавьте этот блок) */
 .bg-image {
   position: relative;
