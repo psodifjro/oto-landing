@@ -150,40 +150,6 @@ nav a:hover {
     color: var(--red);
 }
 
-.stage-animation {
-    position: relative;
-    width: 300px;
-    height: 150px;
-    margin-top: 3rem;
-}
-
-.spotlight {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: radial-gradient(circle, var(--red), transparent 70%);
-    border-radius: 50%;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0.7;
-    animation: pulse 2s infinite;
-}
-
-.speaker {
-    position: absolute;
-    bottom: 0;
-    width: 200px;
-    height: 100px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(0.9); }
-    50% { opacity: 1; transform: translateX(-50%) scale(1.1); }
-}
-
 /* Sections */
 .section {
     padding: 5rem 5%;
