@@ -65,23 +65,27 @@ window.addEventListener('scroll', function() {
     parallax.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
 });
 
-// Рандомная анимация эквалайзера
-function randomEqualizer() {
+function animateEqualizer() {
     const bars = document.querySelectorAll('.equalizer .bar');
+    const animations = [
+        { height: '10px', delay: '0s' },
+        { height: '25px', delay: '0.2s' },
+        { height: '40px', delay: '0.4s' },
+        { height: '15px', delay: '0.1s' },
+        { height: '30px', delay: '0.3s' }
+    ];
     
-    bars.forEach(bar => {
-        // Случайная высота
-        const randomHeight = 10 + Math.random() * 30;
-        bar.style.height = `${randomHeight}px`;
-        
-        // Случайная задержка анимации
-        const randomDelay = Math.random() * 0.5;
-        bar.style.animationDelay = `${randomDelay}s`;
+    bars.forEach((bar, index) => {
+        const anim = animations[index % animations.length];
+        bar.style.height = anim.height;
+        bar.style.animationDelay = anim.delay;
     });
     
-    // Повторяем каждые 500мс для "живого" эффекта
-    setTimeout(randomEqualizer, 500);
+    setTimeout(animateEqualizer, 1000);
 }
 
-// Запускаем при загрузке
-document.addEventListener('DOMContentLoaded', randomEqualizer);
+// Запускаем при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    animateEqualizer();
+});
+
