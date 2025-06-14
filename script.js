@@ -111,34 +111,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-// Инициализация карты Leaflet
-function initMap() {
-    const map = L.map('map').setView([55.766843, 37.671075], 17);
-    
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-
-    // Кастомный маркер
-    const customIcon = L.icon({
-        iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-    });
-
-    L.marker([55.766843, 37.671075], {icon: customIcon})
-     .addTo(map)
-     .bindPopup("<b>ОТО МИИГАиК</b>");
-}
-
-// Подключение Leaflet
-const leafletScript = document.createElement('script');
-leafletScript.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-leafletScript.onload = initMap;
-document.head.appendChild(leafletScript);
-
-const leafletStyle = document.createElement('link');
-leafletStyle.rel = 'stylesheet';
-leafletStyle.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-document.head.appendChild(leafletStyle);
