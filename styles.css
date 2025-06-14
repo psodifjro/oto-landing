@@ -167,6 +167,22 @@ nav a:hover {
   transform: translateY(0);
 }
 
+.team__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.team__item {
+  text-align: center;
+  padding: 20px;
+}
+
 /* ===== Общие стили секций ===== */
 .section {
   padding: 100px 5%;
