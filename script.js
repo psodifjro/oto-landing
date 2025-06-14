@@ -64,3 +64,24 @@ window.addEventListener('scroll', function() {
     let scrollPosition = window.pageYOffset;
     parallax.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
 });
+
+// Рандомная анимация эквалайзера
+function randomEqualizer() {
+    const bars = document.querySelectorAll('.equalizer .bar');
+    
+    bars.forEach(bar => {
+        // Случайная высота
+        const randomHeight = 10 + Math.random() * 30;
+        bar.style.height = `${randomHeight}px`;
+        
+        // Случайная задержка анимации
+        const randomDelay = Math.random() * 0.5;
+        bar.style.animationDelay = `${randomDelay}s`;
+    });
+    
+    // Повторяем каждые 500мс для "живого" эффекта
+    setTimeout(randomEqualizer, 500);
+}
+
+// Запускаем при загрузке
+document.addEventListener('DOMContentLoaded', randomEqualizer);
