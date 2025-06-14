@@ -201,6 +201,9 @@ nav a:hover {
   text-align: left;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* ===== Общие стили секций ===== */
 .section {
   padding: 100px 5%;
