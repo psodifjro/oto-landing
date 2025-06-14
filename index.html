@@ -134,26 +134,23 @@
     </section>
 
     <!-- Контакты -->
-<section id="contacts" class="section">
-    <div class="contacts-container">
-        <!-- Форма слева -->
-        <div class="contact-form">
+<section id="contacts" class="contacts-section">
+    <!-- Карта на весь экран -->
+    <div id="map" class="fullscreen-map"></div>
+    
+    <!-- Форма поверх карты -->
+    <div class="contact-form-overlay">
+        <div class="form-container">
             <h2>Оставить заявку</h2>
-            <form id="feedback-form">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Сообщение"></textarea>
+            <form class="contact-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Ваше сообщение"></textarea>
                 <button type="submit">Отправить</button>
             </form>
-            <div class="contact-info">
-                <p><i class="fas fa-map-marker-alt"></i> Москва, Гороховский пер., 4</p>
-                <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
-                <p><i class="fas fa-envelope"></i> oto@miigaik.ru</p>
-            </div>
-                <div id="map" class="map-container"></div>
-    </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
