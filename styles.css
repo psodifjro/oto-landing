@@ -420,6 +420,38 @@ html {
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
+/* Основные стили для всех секций */
+.section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 60px 0; /* Вертикальные отступы */
+    box-sizing: border-box;
+}
+
+/* Контейнер для контента (на всю ширину) */
+.section-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 5%; /* Горизонтальные отступы */
+}
+
+/* Особые стили для секций с фонами */
+.bg-image .section-content {
+    background-color: rgba(0,0,0,0.7);
+    padding: 40px 5%;
+}
+
+/* Сетка услуг - растягиваем на всю ширину */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    gap: 20px;
+    padding: 0 5%;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     nav {
