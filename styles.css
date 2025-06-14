@@ -120,6 +120,9 @@ nav a:hover {
     text-align: center;
     height: 100vh;
     position: relative;
+    background-attachment: fixed;
+    background-position-y: 0;
+    transition: background-position 0.3s ease-out;
 }
 
 .hero-content {
@@ -202,6 +205,10 @@ html {
     color: var(--red);
 }
 
+#about.bg-image {
+    background-position-y: 30%;
+}
+
 /* Services */
 .services-grid {
     display: grid;
@@ -255,6 +262,10 @@ html {
     background: var(--light-gray);
     margin: 0 auto 1rem;
     overflow: hidden;
+}
+
+#team.bg-image {
+    background-position-y: 50%;
 }
 
 /* Reviews */
