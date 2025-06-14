@@ -137,36 +137,46 @@
 
     <!-- Контакты -->
 
-<section id="contacts" class="section">
-    <h2>Контакты</h2>
-    
-    <div class="contact-container">
-        <!-- Форма -->
+<section id="contacts" class="contacts-section">
+    <div class="contacts-container">
+        <!-- Форма заявки -->
         <div class="contact-form">
-            <h3>Оставить заявку</h3>
-            <form>
-                <input type="text" placeholder="Ваше имя" required>
-                <input type="email" placeholder="Email" required>
-                <input type="tel" placeholder="Телефон">
-                <textarea placeholder="Ваше сообщение"></textarea>
-                <button type="submit">Отправить</button>
+            <h2>Оставить заявку</h2>
+            <form class="application-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Телефон">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Ваше сообщение" rows="5"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Отправить заявку</button>
             </form>
         </div>
-        
+
         <!-- Контактная информация -->
         <div class="contact-info">
-            <h3>Как нас найти</h3>
+            <h2>Контакты</h2>
             <div class="info-item">
                 <i class="fas fa-map-marker-alt"></i>
-                <p>Москва, Гороховский пер., 4</p>
+                <span>Москва, Гороховский пер., 4</span>
             </div>
             <div class="info-item">
                 <i class="fas fa-phone"></i>
-                <p>+7 (495) 123-45-67</p>
+                <span>+7 (495) 123-45-67</span>
             </div>
             <div class="info-item">
                 <i class="fas fa-envelope"></i>
-                <p>oto@miigaik.ru</p>
+                <span>oto@miigaik.ru</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>Пн-Пт: 9:00-18:00</span>
             </div>
         </div>
     </div>
