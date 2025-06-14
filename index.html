@@ -1,157 +1,237 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <!-- Мета-теги -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ОТО МИИГАиК | Техническое обеспечение мероприятий</title>
-  
-  <!-- Стили -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОТО МИИГАиК | Техническое обеспечение мероприятий</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/simple-parallax-js@5.6.2/dist/simpleParallax.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+    
+    
 <body>
-  <!-- Шапка сайта -->
-  <header class="header">
-    <div class="logo-container">
-      <div class="logo-icon">ОТО</div>
-      <div class="equalizer">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+    <!-- Header -->
+<header class="header">
+    <div class="logo-equalizer-container">
+        <div class="logo-icon">ОТО</div>
+        <div class="equalizer">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </div>
     
-    <nav>
-      <a href="#about">О нас</a>
-      <a href="#services">Услуги</a>
-      <a href="#team">Команда</a>
-      <a href="#contacts">Контакты</a>
+    <nav id="navbar">
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#team">Команда</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
     </nav>
-  </header>
-
-  <!-- Герой-секция -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>ОТО МИИГАиК</h1>
-      <p>Профессиональное световое, звуковое и медиа сопровождение мероприятий</p>
-      <a href="#contacts" class="cta-button">Оставить заявку</a>
-    </div>
-  </section>
-
-  <!-- Секция "О нас" -->
-  <section id="about" class="section bg-image" style="--bg-url: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')">
-    <div class="section-content">
-      <h2>О нас</h2>
-      <div class="achievements">
-        <div class="achievement-card">
-          <h3>50+</h3>
-          <p>мероприятий за 2024/2025 год</p>
-        </div>
-        <div class="achievement-card">
-          <h3>Международный форум</h3>
-          <p>Организация выставки "Пространственные данные"</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Секция "Услуги" -->
-  <section id="services" class="section">
-    <h2>Услуги</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <i class="fas fa-lightbulb"></i>
-        <h3>Световое оформление</h3>
-        <p>Профессиональное освещение сцены и пространства</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-volume-up"></i>
-        <h3>Звуковое оборудование</h3>
-        <p>Кристально чистый звук для любых мероприятий</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-video"></i>
-        <h3>Медиаподдержка</h3>
-        <p>Видеотрансляции и мультимедийные решения</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Секция "Команда" -->
-  <section id="team" class="section bg-image" style="--bg-url: url('https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D3D&auto=format&fit=crop&w=2070&q=80')">
-    <div class="section-content">
-      <h2>Наша команда</h2>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="photo-circle">
-            <img src="./images/1.jpg" alt="Андрей Петров - Руководитель">
-          </div>
-          <h3>АНДРЕЙ ПЕТРОВ</h3>
-          <p>РУКОВОДИТЕЛЬ</p>
-        </div>
-        <div class="team-card">
-          <div class="photo-circle">
-            <img src="./images/2.jpg" alt="Степан Можеин - Звукорежиссер">
-          </div>
-          <h3>СТЕПАН МОЖИН</h3>
-          <p>ЗВУКОРЕЖИССЕР</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Секция "Контакты" -->
-  <section id="contacts" class="section">
-    <div class="contacts-container">
-      <!-- Форма обратной связи -->
-      <div class="contact-form">
-        <h2>Оставить заявку</h2>
-        <form class="application-form">
-          <div class="form-group">
-            <input type="text" placeholder="Ваше имя" required>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Email" required>
-          </div>
-          <div class="form-group">
-            <textarea placeholder="Ваше сообщение" rows="5"></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Отправить заявку</button>
-        </form>
-      </div>
-      
-      <!-- Контактная информация -->
-      <div class="contact-info">
-        <h2>Контакты</h2>
-        <div class="info-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>Москва, Гороховский пер., 4</span>
-        </div>
-        <div class="info-item">
-          <i class="fas fa-phone"></i>
-          <span>+7 (495) 123-45-67</span>
-        </div>
-        <div class="info-item">
-          <i class="fas fa-envelope"></i>
-          <span>oto@miigaik.ru</span>
-        </div>
-        <div class="info-item">
-          <i class="fas fa-clock"></i>
-          <span>Пн-Пт: 9:00-18:00</span>
-        </div>
-      </div>
-    </div>
     
-    <!-- Контейнер для карты -->
-    <div id="map" class="map-container"></div>
-  </section>
+</header>
 
-  <!-- Подключение скриптов -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="js/script.js"></script>
+    <!-- Hero -->
+    <section class="hero" id="parallax">
+<div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
+    <h1 data-aos="fade-up">ОТДЕЛ ТЕХНИЧЕСКОГО ОБЕСПЕЧЕНИЯ</h1>
+    <p data-aos="fade-up" data-aos-delay="100">ПРОФЕССИОНАЛЬНОЕ ЗВУКОВОЕ, СВЕТОВОЕ И ВИДЕОСОПРОВОЖДЕНИЕ ПРОЕКТОВ</p>
+    <a href="#contacts" class="cta-button" data-aos="fade-up" data-aos-delay="200">Оставить заявку</a>
+</div>
+        <div class="stage-animation">
+            <div class="spotlight"></div>
+            <div class="speaker"></div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="section bg-image" style="--bg-url: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')">
+  <div class="section-content">
+        <h2>О НАС</h2>
+        <div class="achievements">
+            <div class="achievement-card" data-aos="fade-up">
+                <h3>50+</h3>
+                <p>мероприятий за 2024/2025 год</p>
+            </div>
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Международный форум</h3>
+                <p>Организация выставки "Пространственные данные"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="section">
+        <h2>ЧТО МЫ МОЖЕМ ?</h2>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Световое оформление</h3>
+                <p>Профессиональное освещение сцены и пространства</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-volume-up"></i>
+                <h3>Звуковое оборудование</h3>
+                <p>Кристально чистый звук для любых мероприятий</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-video"></i>
+                <h3>Медиаподдержка</h3>
+                <p>Видеотрансляции и мультимедийные решения</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Команда -->
+  <section id="team" class="section bg-image" style="--bg-url: url('https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D3D&auto=format&fit=crop&w=2070&q=80')">
+  <div class="section-content">
+        <h2>КОМАНДА</h2>
+    <div class="team-grid">
+        <!-- Первый сотрудник -->
+        <div class="team-card">
+              <div class="photo-circle">
+                <img src="./images/1.jpg" alt="Андрей Петров - Руководитель">
+            </div>
+            <h3>АНДРЕЙ ПЕТРОВ</h3>
+            <p>РУКОВОДИТЕЛЬ</p>
+        </div>
+
+        <!-- Второй сотрудник -->
+        <div class="team-card">
+              <div class="photo-circle">
+                <img src="./images/2.jpg" alt="Степан Можин - Звукорежиссер">
+            </div>
+            <h3>СТЕПАН МОЖИН</h3>
+            <p>ЗВУКОРЕЖИССЕР</p>
+        </div>
+    </div>
+</section>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="section">
+        <h2>ОТЗЫВЫ</h2>
+        <div class="slider">
+            <div class="slide active">
+                <p>"Отлично организовали звук на конференции!"</p>
+                <span>— Клиент, 2025</span>
+            </div>
+            <div class="slide">
+                <p>"Лучшее световое решение для нашего фестиваля"</p>
+                <span>— Организатор, 2024</span>
+            </div>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+
+<section id="contacts" class="contacts-section">
+    <!-- Карта на весь экран -->
+    <div id="map" class="fullscreen-map"></div>
+    
+    <!-- Контейнер с формой и контактами поверх карты -->
+    <div class="contacts-overlay">
+        <div class="contacts-container">
+            <!-- Форма -->
+            <div class="contact-form">
+                <h2>Оставить заявку</h2>
+                <form class="application-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Ваше сообщение" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </form>
+            </div>
+            
+            <!-- Контактная информация -->
+            <div class="contact-info">
+                <h2>Контакты</h2>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Москва, Гороховский пер., 4</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (495) 123-45-67</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>oto@miigaik.ru</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: false
+    });
+</script>
+    <script src="https://unpkg.com/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
+<script>
+    // Инициализация для всех фонов
+    const images = document.querySelectorAll('.bg-image');
+    new simpleParallax(images, {
+        scale: 1.2,
+        delay: 0.6,
+        transition: 'cubic-bezier(0,0,0,1)'
+    });
+</script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/map.js"></script>
+    <script>
+    // Инициализация карты
+    function initMap() {
+        const map = L.map('map').setView([55.766843, 37.671075], 17);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Кастомный маркер
+        const customIcon = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
+            iconSize: [40, 40],
+            iconAnchor: [20, 40]
+        });
+
+        L.marker([55.766843, 37.671075], {icon: customIcon})
+         .addTo(map)
+         .bindPopup("<b>ОТО МИИГАиК</b>");
+    }
+    
+    // Инициализация после загрузки страницы
+    window.onload = initMap;
+</script>
 </body>
 </html>
