@@ -104,4 +104,12 @@ document.addEventListener('scroll', function() {
     // Параллакс-эффект для фона
     hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
 });
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
