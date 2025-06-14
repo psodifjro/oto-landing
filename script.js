@@ -1,4 +1,3 @@
-// Mobile menu
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
     this.classList.toggle('active');
     document.querySelector('nav').classList.toggle('active');
@@ -143,4 +142,3 @@ const leafletStyle = document.createElement('link');
 leafletStyle.rel = 'stylesheet';
 leafletStyle.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
 document.head.appendChild(leafletStyle);
-
