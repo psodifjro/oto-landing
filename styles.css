@@ -25,8 +25,7 @@ body, html {
     overflow-x: hidden;
 }
 
-/* Header */
-/* Шапка */
+
 .header {
     background-color: white;
     position: fixed;
@@ -39,33 +38,33 @@ body, html {
     align-items: center;
 }
 
-/* Контейнер для лого и эквалайзера */
+
 .logo-equalizer-container {
     display: flex;
-    align-items: center;  /* Выравнивание по вертикали */
-    gap: 20px;           /* Расстояние между лого и эквалайзером */
-    height: 60px;        /* Фиксированная высота контейнера */
+    align-items: center;  
+    gap: 20px;          
+    height: 60px;        
 }
 
-/* Стили для логотипа */
+
 .logo-icon {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 2.2rem;
     color: var(--red);
-    line-height: 1;       /* Убираем лишний межстрочный интервал */
-    margin: 0;            /* Убираем внешние отступы */
-    padding: 0;           /* Убираем внутренние отступы */
+    line-height: 1;      
+    margin: 0;            
+    padding: 0;           
     display: flex;
-    align-items: center;  /* Центрируем текст по вертикали */
-    height: 100%;         /* Занимает всю высоту контейнера */
+    align-items: center; 
+    height: 100%;        
 }
 
-/* Стили для эквалайзера */
+
 .equalizer {
     display: flex;
-    align-items: center;  /* Центрируем эквалайзер по вертикали */
-    height: 100%;         /* Занимает всю высоту контейнера */
+    align-items: center;  
+    height: 100%;         
     gap: 6px;
 }
 
@@ -76,7 +75,7 @@ body, html {
     animation: equalize 1.5s infinite ease-in-out;
 }
 
-/* Разная высота и анимация для каждой полоски */
+
 .equalizer .bar:nth-child(1) { height: 15px; animation-delay: 0.1s; }
 .equalizer .bar:nth-child(2) { height: 25px; animation-delay: 0.3s; }
 .equalizer .bar:nth-child(3) { height: 20px; animation-delay: 0.5s; }
@@ -88,13 +87,13 @@ body, html {
     50% { transform: scaleY(1.3); }
 }
 
-/* Назначаем разную высоту и задержку для каждой полоски */
+
 .equalizer .bar:nth-child(1) { height: 15px; animation-delay: 0.1s; }
 .equalizer .bar:nth-child(2) { height: 25px; animation-delay: 0.3s; }
 .equalizer .bar:nth-child(3) { height: 20px; animation-delay: 0.5s; }
 .equalizer .bar:nth-child(4) { height: 30px; animation-delay: 0.2s; }
 .equalizer .bar:nth-child(5) { height: 10px; animation-delay: 0.4s; }
-/* Обновляем цвет текста и логотипа для контраста */
+
 nav a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
@@ -112,15 +111,14 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Hero */
-/* Центрирование содержимого */
+
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                 url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Для параллакс-эффекта */
+    background-attachment: fixed; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,8 +146,8 @@ nav a:hover {
 }
 
 .hero-content p {
-    max-width: 600px; /* Ограничиваем ширину текста */
-    padding: 0 15px; /* Добавляем отступы по бокам */
+    max-width: 600px; 
+    padding: 0 15px; 
     transition: all 0.5s ease-out 0.1s;
 }
 
@@ -196,7 +194,6 @@ html {
     color: var(--red);
 }
 
-/* Sections */
 .section {
     padding: 5rem 5%;
     min-height: 100vh;
@@ -216,7 +213,6 @@ html {
     background-position-y: 30%;
 }
 
-/* Services */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -247,7 +243,6 @@ html {
     margin-bottom: 1rem;
 }
 
-/* Team */
 .photo-circle {
     width: 180px;
     height: 180px;
@@ -270,7 +265,7 @@ html {
     transform: scale(1.1);
 }
 
-/* Адаптация сетки */
+
 .team-grid {
     display: flex;
     flex-wrap: wrap;
@@ -284,7 +279,7 @@ html {
     max-width: 250px;
 }
 
-/* Эффекты при наведении */
+
 .team-card:hover {
     transform: translateY(-10px);
 }
@@ -298,7 +293,7 @@ html {
     color: var(--dark-gray);
     margin-top: 5px;
 }
-/* Анимация круга */
+
 .photo-circle {
     transition: all 0.3s ease;
 }
@@ -308,7 +303,7 @@ html {
     transform: rotate(5deg);
 }
 
-/* Эффект границы */
+
 .photo-circle::before {
     content: '';
     position: absolute;
@@ -322,7 +317,7 @@ html {
 }
 
 .photo-circle img {
-    object-position: center top; /* Выравнивание по лицу */
+    object-position: center top; 
 }
 
 #team.bg-image {
@@ -330,7 +325,7 @@ html {
 }
 
 
-/* Contacts */
+
 .contacts-section {
     padding: 80px 0;
     background-color: #f9f9f9;
@@ -463,7 +458,6 @@ html {
     color: #333;
 }
 
-/* Форма поверх карты */
 .contact-form-overlay {
     position: absolute;
     top: 0;
@@ -494,7 +488,7 @@ html {
     box-sizing: border-box;
 }
 
-/* Центрирование заголовков */
+
 .section h2 {
     text-align: center;
     margin-bottom: 50px;
@@ -509,7 +503,7 @@ html {
         opacity: 1;
     }
 }
-/* Стили для секций с фоновыми изображениями (добавьте этот блок) */
+
 .bg-image {
   position: relative;
   background: 
@@ -540,7 +534,7 @@ html {
   backdrop-filter: blur(3px);
 }
 
-/* Дополнительные стили для контраста текста */
+
 #about .section-content,
 #team .section-content {
   background-color: rgba(0, 0, 0, 0.7);
@@ -551,30 +545,29 @@ html {
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-/* Основные стили для всех секций */
+
 .section {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    padding: 60px 0; /* Вертикальные отступы */
+    padding: 60px 0; 
     box-sizing: border-box;
 }
 
-/* Контейнер для контента (на всю ширину) */
+
 .section-content {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    padding: 20px 5%; /* Горизонтальные отступы */
+    padding: 20px 5%; 
 }
 
-/* Особые стили для секций с фонами */
+
 .bg-image .section-content {
     background-color: rgba(0,0,0,0.7);
     padding: 40px 5%;
 }
 
-/* Сетка услуг - растягиваем на всю ширину */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -583,7 +576,7 @@ html {
     padding: 0 5%;
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
     nav {
         position: fixed;
