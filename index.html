@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/simple-parallax-js@5.6.2/dist/simpleParallax.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
     
 <body>
@@ -133,10 +134,12 @@
     </section>
 
     <!-- Контакты -->
-    <section id="contacts" class="section">
-        <h2>КОНТАКТЫ</h2>
-        <div class="contact-grid">
-            <form class="contact-form" id="feedback-form">
+<section id="contacts" class="section">
+    <div class="contacts-container">
+        <!-- Форма слева -->
+        <div class="contact-form">
+            <h2>Оставить заявку</h2>
+            <form id="feedback-form">
                 <input type="text" name="name" placeholder="Ваше имя" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <textarea name="message" placeholder="Сообщение"></textarea>
@@ -147,6 +150,8 @@
                 <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
                 <p><i class="fas fa-envelope"></i> oto@miigaik.ru</p>
             </div>
+                <div id="map" class="map-container"></div>
+    </div>
         </div>
     </section>
 
@@ -176,5 +181,7 @@
         transition: 'cubic-bezier(0,0,0,1)'
     });
 </script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/map.js"></script> <!-- Создайте этот файл -->
 </body>
 </html>
