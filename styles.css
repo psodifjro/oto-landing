@@ -20,30 +20,22 @@ body {
   overflow-x: hidden;
 }
 #main {
-  /* Сбрасываем ограничение ширины */
-  width: 100vw; /* Ширина = ширина viewport */
-  margin-left: calc(-50vw + 50%); /* Центрируем */
   position: relative;
+  width: 100%;
   left: 0;
-  
-  /* Стили фона */
-  background: url('img/main-bg.jpg') no-repeat center center;
-  background-size: cover;
-  height: 100vh; /* На всю высоту экрана */
-  
-  /* Чтобы контент оставался по центру */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  right: 0;
 }
 
-/* Контейнер внутри секции */
-#main .container {
-  position: relative;
-  z-index: 2; /* Чтобы контент был над фоном */
-  max-width: 1200px; /* Ограничение для текста */
+#main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 0 20px;
+  height: 100%;
+  background: url('img/main-bg.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
 }
 
 /* ===== Шапка ===== */
