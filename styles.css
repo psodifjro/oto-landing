@@ -166,6 +166,17 @@ nav a:hover {
   z-index: -1;
 }
 
+.section-with-bg {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-size: cover;
+  background-position: center;
+}
+
 /* ===== Адаптивность ===== */
 @media (max-width: 768px) {
   .header {
