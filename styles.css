@@ -106,22 +106,28 @@ nav a:hover {
 }
 
 /* Hero */
+/* Центрирование содержимого */
 .hero {
-    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 5%;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
+    height: 100vh;
     position: relative;
-    overflow: hidden;
 }
 
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    transform-origin: center;
+}
+
+/* Анимация при скролле */
+.hero-content {
+    transition: transform 0.5s ease-out;
+    will-change: transform;
+}
 .hero h1 {
     font-size: 56px;
     margin-bottom: 1rem;
