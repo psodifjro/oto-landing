@@ -183,6 +183,24 @@ nav a:hover {
   padding: 20px;
 }
 
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.contacts__form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.contacts__info {
+  text-align: left;
+}
+
 /* ===== Общие стили секций ===== */
 .section {
   padding: 100px 5%;
