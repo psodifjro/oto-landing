@@ -126,6 +126,8 @@ nav a:hover {
     width: 100%;
     max-width: 800px;
     padding: 0 20px;
+    transition: transform 0.5s ease-out;
+    will-change: transform;
 }
 
 .hero-content h1,
@@ -138,12 +140,7 @@ nav a:hover {
 .hero-content p {
     max-width: 600px; /* Ограничиваем ширину текста */
     padding: 0 15px; /* Добавляем отступы по бокам */
-}
-
-/* Анимация при скролле */
-.hero-content {
-    transition: transform 0.5s ease-out;
-    will-change: transform;
+    transition: all 0.5s ease-out 0.1s;
 }
 
 html {
@@ -154,13 +151,10 @@ html {
     transition: all 0.5s ease-out;
 }
 
-.hero-content p {
-    transition: all 0.5s ease-out 0.1s;
-}
-
 .cta-button {
     transition: all 0.5s ease-out 0.2s;
 }
+
 .hero h1 {
     font-size: 56px;
     margin-bottom: 1rem;
