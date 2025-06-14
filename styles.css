@@ -248,55 +248,82 @@ html {
 }
 
 /* Team */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    width: 100%;
-    padding: 0 5%;
-    margin-top: 40px;
-}
-
-.team-card {
-    background: white;
-    border-radius: 10px;
+.photo-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    margin: 0 auto 20px;
+    border: 4px solid var(--red);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
 }
 
-.team-card:hover {
-    transform: translateY(-10px);
-}
-
-.team-photo {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-.team-photo img {
+.photo-circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
 }
 
-.team-card:hover img {
-    transform: scale(1.05);
+.team-card:hover .photo-circle img {
+    transform: scale(1.1);
+}
+
+/* Адаптация сетки */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 5%;
+}
+
+.team-card {
+    text-align: center;
+    max-width: 250px;
+}
+
+/* Эффекты при наведении */
+.team-card:hover {
+    transform: translateY(-10px);
 }
 
 .team-card h3 {
-    margin: 20px 0 5px;
-    padding: 0 20px;
+    margin-top: 15px;
     font-size: 1.3rem;
 }
 
 .team-card p {
-    padding: 0 20px 20px;
     color: var(--dark-gray);
+    margin-top: 5px;
+}
+/* Анимация круга */
+.photo-circle {
+    transition: all 0.3s ease;
 }
 
+.team-card:hover .photo-circle {
+    border-color: var(--dark-gray);
+    transform: rotate(5deg);
+}
+
+/* Эффект границы */
+.photo-circle::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid var(--ivory);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.photo-circle img {
+    object-position: center top; /* Выравнивание по лицу */
+}
 
 #team.bg-image {
     background-position-y: 50%;
