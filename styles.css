@@ -123,10 +123,21 @@ nav a:hover {
 }
 
 .hero-content {
+    width: 100%;
     max-width: 800px;
-    margin: 0 auto;
     padding: 0 20px;
-    transform-origin: center;
+}
+
+.hero-content h1,
+.hero-content p {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content p {
+    max-width: 600px; /* Ограничиваем ширину текста */
+    padding: 0 15px; /* Добавляем отступы по бокам */
 }
 
 /* Анимация при скролле */
