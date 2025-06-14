@@ -184,31 +184,5 @@
         transition: 'cubic-bezier(0,0,0,1)'
     });
 </script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="js/map.js"></script>
-    <script>
-    // Инициализация карты
-    function initMap() {
-        const map = L.map('map').setView([55.766843, 37.671075], 17);
-        
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-
-        // Кастомный маркер
-        const customIcon = L.icon({
-            iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
-            iconSize: [40, 40],
-            iconAnchor: [20, 40]
-        });
-
-        L.marker([55.766843, 37.671075], {icon: customIcon})
-         .addTo(map)
-         .bindPopup("<b>ОТО МИИГАиК</b>");
-    }
-    
-    // Инициализация после загрузки страницы
-    window.onload = initMap;
-</script>
 </body>
 </html>
