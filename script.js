@@ -89,3 +89,19 @@ document.addEventListener('DOMContentLoaded', () => {
     animateEqualizer();
 });
 
+// Анимация увеличения при скролле
+document.addEventListener('scroll', function() {
+    const hero = document.querySelector('.hero');
+    const heroContent = document.querySelector('.hero-content');
+    const heroHeight = hero.offsetHeight;
+    const scrollPosition = window.pageYOffset;
+    
+    // Коэффициент увеличения (можно настроить)
+    const scale = 1 + Math.min(scrollPosition / 1000, 0.3);
+    
+    heroContent.style.transform = `scale(${scale})`;
+    
+    // Параллакс-эффект для фона
+    hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+});
+
