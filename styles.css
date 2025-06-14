@@ -32,33 +32,41 @@ body {
 }
 }
 
-.logo {
+.logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px; /* Расстояние между лого и эквалайзером */
 }
 
 .logo-icon {
     font-weight: bold;
-    font-size: 1.8rem;
-    color: var(--red); /* Красный цвет для "ОТО" */
+    font-size: 2.2rem; /* Увеличили размер */
+    color: var(--red);
     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.equalizer {
+    display: flex;
+    align-items: flex-end;
+    height: 40px; /* Увеличили высоту */
+    gap: 4px; /* Расстояние между полосками */
 }
 
 .equalizer span {
     display: inline-block;
-    width: 4px;
+    width: 6px; /* Шире полоски */
     height: 20px;
     background: var(--red);
-    margin: 0 2px;
     animation: equalize 1.5s infinite ease-in-out;
 }
 
+
 @keyframes equalize {
     0%, 100% { height: 10px; }
+    25% { height: 30px; }
     50% { height: 20px; }
+    75% { height: 40px; }
 }
-
 /* Обновляем цвет текста и логотипа для контраста */
 nav a {
     color: var(--dark-gray); /* Тёмно-серый вместо белого */
