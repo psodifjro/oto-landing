@@ -135,20 +135,38 @@
     </section>
 
     <!-- Контакты -->
-<section id="contacts" class="contacts-section">
-    <!-- Карта на весь экран -->
-    <div id="map" class="fullscreen-map"></div>
+
+<section id="contacts" class="section">
+    <h2>Контакты</h2>
     
-    <!-- Форма поверх карты -->
-    <div class="contact-form-overlay">
-        <div class="form-container">
-            <h2>Оставить заявку</h2>
-            <form class="contact-form">
+    <div class="contact-container">
+        <!-- Форма -->
+        <div class="contact-form">
+            <h3>Оставить заявку</h3>
+            <form>
                 <input type="text" placeholder="Ваше имя" required>
                 <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Телефон">
                 <textarea placeholder="Ваше сообщение"></textarea>
                 <button type="submit">Отправить</button>
             </form>
+        </div>
+        
+        <!-- Контактная информация -->
+        <div class="contact-info">
+            <h3>Как нас найти</h3>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Москва, Гороховский пер., 4</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <p>+7 (495) 123-45-67</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <p>oto@miigaik.ru</p>
+            </div>
         </div>
     </div>
 </section>
