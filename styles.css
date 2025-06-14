@@ -466,6 +466,44 @@ html {
 #map:hover {
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.contacts-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fullscreen-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Форма поверх карты */
+.contact-form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
 /* Стили для секций с фоновыми изображениями (добавьте этот блок) */
 .bg-image {
   position: relative;
