@@ -329,56 +329,6 @@ html {
     background-position-y: 50%;
 }
 
-/* Reviews */
-.slider {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    height: 200px;
-    overflow: hidden;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.slide p {
-    font-size: 1.5rem;
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ccc;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: var(--red);
-}
 
 /* Contacts */
 .contacts-section {
