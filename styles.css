@@ -483,6 +483,16 @@ html {
     z-index: 1;
 }
 
+#map::before {
+    content: "Загрузка карты...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: #333;
+}
+
 /* Форма поверх карты */
 .contact-form-overlay {
     position: absolute;
@@ -503,6 +513,16 @@ html {
     width: 100%;
     max-width: 500px;
     box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 /* Стили для секций с фоновыми изображениями (добавьте этот блок) */
 .bg-image {
