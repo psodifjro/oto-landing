@@ -19,16 +19,31 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-.main {
-  background: url('img/main-background.jpg') no-repeat center center;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
+#main {
+  /* Сбрасываем ограничение ширины */
+  width: 100vw; /* Ширина = ширина viewport */
+  margin-left: calc(-50vw + 50%); /* Центрируем */
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  left: 0;
+  
+  /* Стили фона */
+  background: url('img/main-bg.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh; /* На всю высоту экрана */
+  
+  /* Чтобы контент оставался по центру */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Контейнер внутри секции */
+#main .container {
+  position: relative;
+  z-index: 2; /* Чтобы контент был над фоном */
+  max-width: 1200px; /* Ограничение для текста */
+  width: 100%;
+  padding: 0 20px;
 }
 
 /* ===== Шапка ===== */
